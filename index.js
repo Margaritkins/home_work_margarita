@@ -1,101 +1,57 @@
-// const userInput = prompt("type number");
+// const logAdult = function(age, AGE_ADULT = 18) {
+//   return (age === AGE_ADULT) ? 'adult' : 'not adult'
+// }
+// // console.log(logAdult(8));
 
-// /**
-//  *
-//  * @param {number} val - integer
-//  * @returns {string, number}
-//  */
-// const isInputNumber = function (val) {
-//   if (val === "" || val === null || val === " " || Number.isNaN(Number(val))) {
-//     return "it's not number";
-//   }
-//   {
-//     return val;
-//   }
-// };
+// // task type something
+// const userData = prompt ('type something');
 
-// // const isNumOdd = function(val) {
-// //   if (val % 2 === 1) {
-// //     return 'odd';
-// //   }
-// //   {
-// //     return 'even'
-// //   }
-// // }
+// const checkUserData = function(val) {
+//   return (val === null || val === ' ' || val === '') ? 'error' : 'thank you';
+// }
+// console.log(typeof(userData), checkUserData(userData));
 
-// /**
-//  *
-//  * @param {number} val - integer
-//  * @returns {string}
-//  */
-// const isNumOddOrEven = function (val) {
-//   if (val % 2 === 0) {
-//     return "even";
-//   }
-//   if (val % 2 === 1) {
-//     return "odd";
-//   }
-//   {
-//     return "it's not number";
-//   }
-// };
-// console.log(isNumOddOrEven(isInputNumber(userInput)));
-// console.log(isInputNumber(userInput));
-// console.log(isNumOdd(isInputNumber(userInput)));
+// // task type something another solution
+// const checkUserData1 = function() {
+//   return prompt ('type something') ? 'thank you' : 'error';
+// }
+// console.log(checkUserData1(prompt));
 
-// 2)написати функцію, яка приймає два аргументи і, якщо аргументи одного типу, то повертає той, який має більше значення (якщо значення рівні - повертаємо null), інакше(якщо різного типу) теж повертає null.
+// const userDay = prompt('type weekday number');
 
-// Значення для перевірки функції вводимо без користувача.
+// const workdayOrWeekend = function(num) {
+//   return (num >= 1 && num <= 5) ? 'workday' : (num >=6 && num <= 7) ? 'weekend' : 'error';
+// }
+// console.log(workdayOrWeekend(userDay));
 
-const value1 = "1234";
-const value2 = "123";
+const userMonth = prompt("type month number");
 
-/**
- *
- * @param {any} arg1
- * @param {any} arg2
- * @returns {boolean}
- */
-const checkTypeofArg = function (arg1, arg2) {
-  return typeof arg1 === typeof arg2;
-};
-
-/**
- *
- * @param {any} arg1
- * @param {any} arg2
- * @returns {boolean}
- */
-const isBigger = function (arg1, arg2) {
-  return arg1 > arg2;
-};
-
-/**
- *
- * @param {any} arg1
- * @param {any} arg2
- * @returns {boolean}
- */
-const isSmaller = function (arg1, arg2) {
-  return arg1 < arg2;
-};
-
-/**
- *
- * @param {any} arg1
- * @param {any} arg2
- * @returns {*}
- */
-const isArgsTheSameType = function (arg1, arg2) {
-  if (checkTypeofArg(arg1, arg2) && isBigger(arg1, arg2)) {
-    return arg1;
+const wichSeason = function(num) {
+  switch (userMonth) {
+    case "1":
+    case "2":
+    case "12":
+      return("winter");
+      break;
+    case "3":
+    case "4":
+    case "5":
+      return ("spring");
+      break;
+    case "6":
+    case "7":
+    case "8":
+      return ("sumer");
+      break;
+    case "9":
+    case "10":
+    case "11":
+      return ("fall");
+      break;
+    default:
+      return ("error");
+      break;
   }
-  if (checkTypeofArg(arg1, arg2) && isSmaller(arg1, arg2)) {
-    return arg2;
-  }
-  {
-    return null;
-  }
-};
+}
 
-console.log(isArgsTheSameType(value1, value2));
+console.log(wichSeason(userMonth));
